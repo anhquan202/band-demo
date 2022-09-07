@@ -70,6 +70,7 @@ html{
     display: block;
 }
 .nav__mobile .overlay {
+    margin-top: 4.6rem;
     background-color: rgb(12 10 10 / 20%);
     position: fixed;
     top: 0;
