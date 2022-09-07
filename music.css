@@ -80,7 +80,7 @@ i{
 #avatar{
     position: relative;
     margin-top: 46px;
-    background: url(./image/chicago.jpg) top center / cover no-repeat;
+    background: url('./image/chicago.jpg') top center / cover no-repeat;
     padding-top: 50%;
 }
 .avatar__content{
