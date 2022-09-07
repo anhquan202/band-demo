@@ -7,31 +7,91 @@
     --color-font: #fff;
 }
 html{
-    font-size: 0.625rem;
+    font-size: 62.5%;
     font-family: "Lato", sans-serif;
     line-height: 1.5;
 }
 /* Css navigation */
 #navigation{
     width: 100%;
-    height: 46px;
-    display: flex;
-    background: #0e0d0d;
-    justify-content: space-between;   
+    height: 4.6rem;
+    background: #0e0d0d;   
     box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 16%);
     position: fixed;
     z-index: 1;
     top: 0;
 }
+/* Nav in tablet, pc */
 .nav__menu{
     display: flex;
     align-items: center;
     list-style: none;
-    height: 46px;
+    height: 4.6rem;
+}
+.nav__pc{
+    display: flex;
+    justify-content: space-between;
+}
+/* Nav in mobile */
+.nav__mobile {
+    display: flex;
+    width: 100%;
+    height: 4.6rem;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center ;
+}
+.nav__mobile > a {
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 2.4rem;
+}
+.nav__mobile-menu {
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    display: none;
+    animation: fadeIn linear 0.2s;
+}
+.nav__mobile-bars {
+    color: #fff;
+    padding: 1.2rem 2.4rem;
+    height: 4.6rem;
+}
+.nav__input {
+    display: none;
+}
+.nav__input:checked ~ .nav__mobile-menu {
+    display: block;
+}
+.nav__mobile .overlay {
+    background-color: rgb(12 10 10 / 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    animation: fadeIn linear 0.3s;
+}
+.nav__input:checked ~ .overlay {
+    display: block;
+}
+.nav__mobile-menu li {
+    padding: 1.2rem 2.4rem;
+}
+a.nav__mobile-list {
+    text-decoration: none;
+    color: #fff;
 }
 .nav__menu li {
     position: relative;
-    padding: 12px 24px;
+    padding: 1.2rem 2.4rem;
     font-size: 1.5rem;
 }
 .nav__menu > li > a{
@@ -54,7 +114,7 @@ html{
     left: 0;
     list-style: none;
     background: #ccc;
-    width: 120px;
+    width: 12rem;
     display: none;
 }
 .nav__menu--subnav li {
@@ -66,26 +126,27 @@ html{
     color: #000;
 }
 #nav__search{
-    padding: 12px 24px;
+    padding: 1.4rem 2.6rem;
 }
 #nav__search:hover {
     background: #e73535;
     cursor: pointer;
 }
 /* Button search */
-i{
+#nav__search > i{
     font-size: 1.6rem;
     color: #fff;
 }
+
 #avatar{
     position: relative;
-    margin-top: 46px;
-    background: url('./image/chicago.jpg') top center / cover no-repeat;
+    margin-top: 4.6rem;
+    background: url(./image/chicago.jpg) top center / cover no-repeat;
     padding-top: 50%;
 }
 .avatar__content{
     position: absolute;
-    padding: 32px 16px;
+    padding: 3.2rem 1.6rem;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 0px);
@@ -106,9 +167,10 @@ i{
 
 }
 .container{
+    max-width: 100%;
     width: 800px;
     height: auto;
-    padding: 64px 16px;
+    padding: 6.4rem 1.6rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -117,11 +179,11 @@ i{
     font-size: 3rem;
     letter-spacing: 4px;
     font-weight: 400;
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 .slogan {
     text-align: center;
-    margin: 10px 0;
+    margin: 1rem 0;
     font-size: 1.5rem;
     font-style: italic;
     color: rgb(124 87 87 / 80%);
@@ -129,21 +191,23 @@ i{
 .text__content {
     margin: 10px 0;
     font-size: 1.5rem;
+    text-align: justify;
+    word-spacing: -1px;
 }
 .Band {
     display: flex;
-    padding: 32px 0;
+    padding: 3.2rem 0;
     width: 100%;
     height: 100%;
 }
-.Band__Individual {
+.Band__Individuals {
     text-align: center;
     font-size: 1.5rem;
 }
-.Band__Individual p {
+.Band__Individuals p {
     margin: 15px 0;
 }
-.Band__Individual img {
+.Band__Individuals img {
     width: 60%;
     margin: 0 0 16px;
 }
@@ -197,9 +261,6 @@ i{
     width: 33.33333%;
     padding: 0 8px;
     margin-bottom: 16px;
-}
-.Tour__info img:hover {
-    opacity: 0.7;
 }
 .info__detail{
     background: #fff;

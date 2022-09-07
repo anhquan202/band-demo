@@ -6,41 +6,70 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./music.css">
+        <link rel="stylesheet" href="./responsive.css">
+        <script src="./index.js"></script>
 	    <script src="https://kit.fontawesome.com/d85d4beb64.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="main">
             <!-- navigation -->
             <div id="navigation">
-                <!-- nav -->
-                <ul class="nav__menu">
-                    <li>
-                        <a href="#"> HOME</a>
-                    </li>
-                    <li>
-                        <a href="#band"> BAND</a>
-                    </li>
-                    <li>
-                        <a href="#Tour">TOUR</a>
-                    </li>
-                    <li>
-                        <a href="#contact">CONTACT</a>
-                    </li>
-                    <li>
-                        <a href="">MORE 
-                            <i class="fa-solid fa-angle-down"></i>
-                        </a>
-                        <ul class="nav__menu--subnav">
-                            <li><a href=" "> Merchandise</a> </li>
-                            <li><a href=" "> Extras</a> </li>
-                            <li><a href=" "> Media</a> </li>
-                        </ul>    
-                    </li>
-                </ul>
-                <!-- Search -->
-                <div id="nav__search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+                <!-- nav pc-->
+                <nav class="nav__pc">
+                    <ul class="nav__menu">
+                        <li>
+                            <a href="#"> HOME</a>
+                        </li>
+                        <li>
+                            <a href="#band"> BAND</a>
+                        </li>
+                        <li>
+                            <a href="#Tour">TOUR</a>
+                        </li>
+                        <li>
+                            <a href="#contact">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="">MORE 
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="nav__menu--subnav">
+                                <li><a href=" "> Merchandise</a> </li>
+                                <li><a href=" "> Extras</a> </li>
+                                <li><a href=" "> Media</a> </li>
+                            </ul>    
+                        </li>
+                    </ul>
+                    <!-- Search -->
+                    <div id="nav__search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </nav>
+                <!-- Nav mobile -->
+                <nav class="nav__mobile">
+                    <a href="#"> HOME</a>
+                    <label for="nav__mobile-input" class="nav__mobile-bars">
+                        <i class="fa-sharp fa-solid fa-bars"></i>
+                    </label>
+                    <input type="checkbox" name="" class="nav__input" id="nav__mobile-input">
+                    <label for="nav__mobile-input" class="overlay">
+                        
+                    </label>
+                    <ul class="nav__mobile-menu"> 
+                        <li>
+                            <a href="#band" class="nav__mobile-list"> BAND</a>
+                        </li>
+                        <li>
+                            <a href="#Tour" class="nav__mobile-list">TOUR</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav__mobile-list">CONTACT</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav__mobile-list">MORE  </a>         
+                        </li>
+                    </ul> 
+                </nav>
             </div>
             <!-- Avatar -->
             <div id="avatar">
@@ -70,15 +99,15 @@
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <div class="Band">
-                    <div class="Band__Individual">
+                    <div class="Band__Individuals">
                         <p>Name</p>
                         <img src="./image/bandmember.jpg" alt="">
                     </div>
-                    <div class="Band__Individual">
+                    <div class="Band__Individuals">
                         <p>Name</p>
                         <img src="./image/bandmember.jpg" alt="">
                     </div>
-                    <div class="Band__Individual">
+                    <div class="Band__Individuals">
                         <p>Name</p>
                         <img src="./image/bandmember.jpg" alt="">
                     </div>
@@ -196,6 +225,7 @@
                     </div>
                </div>    
             </div>
+            <!-- Map -->
             <div class="map">
                 <img src="./image/map.jpg" style="width:100% ; height: 50%; vertical-align: middle;" alt="">
             </div>

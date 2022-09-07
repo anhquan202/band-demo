@@ -1,0 +1,48 @@
+/* > Medium Tablet, Ipad */
+@media screen and (min-width: 601px) {
+    .nav__mobile{
+        display: none;
+    }
+}
+/* Small Mobile */
+@media screen and (max-width: 600px) {
+    /* Navbar */
+    .nav__pc {
+        display: none;
+    }
+    .nav__mobile-btn{
+        display: block;
+    }
+    /* Avatar */
+    .avatar__content {
+        display: none;
+    }
+    /* band, Tour__list, contact__content*/
+    .Band, .Tour__list, .contact__content {
+        flex-wrap: wrap;
+    }
+    .Band__Individuals, .Tour__info {
+        width: 100%;
+    }
+    /* Contact */
+    .contact__content--info {
+        width: 100%;
+    }
+    .contact__content--form {
+        width: 100%;
+    }
+    .form__container {
+        flex-direction: column;
+    }
+    .form__login {
+        padding: 6px 8px ;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
