@@ -58,18 +58,26 @@ html{
     display: none;
     animation: fadeIn linear 0.2s;
 }
+#display.open{
+    display: block;
+}
 .nav__mobile-bars {
     color: #fff;
     padding: 1.2rem 2.4rem;
     height: 4.6rem;
 }
+#display .nav__list:hover {
+    background-color: #ccc;
+    color: #000;
+}
+div#input__nav:hover {
+    background: #ccc;
+    color: #000;
+}
 .nav__input {
     display: none;
 }
-.nav__input:checked ~ .nav__mobile-menu {
-    display: block;
-}
-.nav__mobile .overlay {
+.overlay {
     background-color: rgb(12 10 10 / 20%);
     position: fixed;
     margin-top: 4.6rem;
@@ -79,9 +87,6 @@ html{
     bottom: 0;
     display: none;
     animation: fadeIn linear 0.3s;
-}
-.nav__input:checked ~ .overlay {
-    display: block;
 }
 a.nav__mobile-list {
     display: block;
@@ -276,9 +281,6 @@ a.nav__mobile-list {
 }
 .info__detail--time{
     opacity: 0.6;
-}
-.info__detail--explain{
-
 }
 .buy-ticket{
     margin-bottom: 16px;
